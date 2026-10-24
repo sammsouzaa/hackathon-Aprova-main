@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>Permitir microfone - Copiloto Meet</title>
+  <style>
+    body { font-family: -apple-system, "Segoe UI", Roboto, sans-serif; background: #0f172a; color: #f8fafc;
+           display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; }
+    .card { background: #1e293b; padding: 28px; border-radius: 12px; max-width: 420px; text-align: center; line-height: 1.5; }
+    #status { margin-top: 12px; color: #38bdf8; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>🎙️ Microfone</h2>
+    <p>O Copiloto grava a sua voz junto com o áudio da reunião, para as suas perguntas entrarem na transcrição.
+       Clique em <b>Permitir</b> no aviso do Chrome. Isso só precisa ser feito uma vez.</p>
+    <p style="color:#94a3b8;font-size:13px">Dica: use fone de ouvido para a voz dos outros não vazar no microfone.</p>
+    <div id="status">Aguardando permissão...</div>
+  </div>
+  <script src="permissao.js"></script>
+</body>
+</html>

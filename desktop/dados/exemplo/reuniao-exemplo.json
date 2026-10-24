@@ -1,0 +1,161 @@
+{
+  "versaoEsquema": 1,
+  "reuniao": {
+    "id": "REU-01",
+    "processo": "Alvará de construção residencial",
+    "iniciadaEm": "2026-10-24T14:02:11-03:00",
+    "encerradaEm": "2026-10-24T14:02:45-03:00",
+    "estado": "concluida",
+    "modoEscuta": "gravacao_com_aviso",
+    "participantesAvisados": true
+  },
+  "motor": {
+    "nome": "whisper-base-q8",
+    "biblioteca": "@huggingface/transformers@4.3.1 + onnxruntime-node",
+    "idioma": "pt",
+    "threads": 4,
+    "rtfMedio": 0.186
+  },
+  "falantes": [
+    {
+      "id": "implantadora",
+      "rotulo": "Implantadora",
+      "canal": "microfone",
+      "dispositivo": "Microfone Built-in Estéreo"
+    },
+    {
+      "id": "prefeitura",
+      "rotulo": "Prefeitura",
+      "canal": "monitor",
+      "dispositivo": "Prumo-Reuniao"
+    }
+  ],
+  "segmentos": [
+    {
+      "id": 1,
+      "falante": "implantadora",
+      "atribuicao": "canal",
+      "canal": "microfone",
+      "inicioMs": 1200,
+      "fimMs": 4800,
+      "texto": "Boa tarde Helena, vamos alinhar as regras do alvará de construção residencial?",
+      "confianca": 0.96,
+      "descartadoPorEco": false,
+      "motivoDescarte": null,
+      "latenciaMs": 620,
+      "forcadoPorTamanho": false
+    },
+    {
+      "id": 2,
+      "falante": "prefeitura",
+      "atribuicao": "canal",
+      "canal": "monitor",
+      "inicioMs": 5100,
+      "fimMs": 9500,
+      "texto": "Olá Marina! Sim, para as zonas ZR1, ZR2 e ZC1 temos parâmetros bem definidos.",
+      "confianca": 0.94,
+      "descartadoPorEco": false,
+      "motivoDescarte": null,
+      "latenciaMs": 580,
+      "forcadoPorTamanho": false
+    },
+    {
+      "id": 3,
+      "falante": "prefeitura",
+      "atribuicao": "canal",
+      "canal": "monitor",
+      "inicioMs": 10200,
+      "fimMs": 14800,
+      "texto": "A taxa de ocupação máxima permitida na zona residencial é de 58%.",
+      "confianca": 0.98,
+      "descartadoPorEco": false,
+      "motivoDescarte": null,
+      "latenciaMs": 590,
+      "forcadoPorTamanho": false
+    },
+    {
+      "id": 4,
+      "falante": "implantadora",
+      "atribuicao": "canal",
+      "canal": "microfone",
+      "inicioMs": 14900,
+      "fimMs": 18500,
+      "texto": "A taxa de ocupação máxima permitida na zona residencial é de 58%.",
+      "confianca": 0.91,
+      "descartadoPorEco": true,
+      "motivoDescarte": "eco_texto",
+      "latenciaMs": 610,
+      "forcadoPorTamanho": false
+    },
+    {
+      "id": 5,
+      "falante": "implantadora",
+      "atribuicao": "canal",
+      "canal": "microfone",
+      "inicioMs": 19000,
+      "fimMs": 23200,
+      "texto": "Perfeito, e quanto ao recuo frontal obrigatório na ZR2?",
+      "confianca": 0.95,
+      "descartadoPorEco": false,
+      "motivoDescarte": null,
+      "latenciaMs": 570,
+      "forcadoPorTamanho": false
+    },
+    {
+      "id": 6,
+      "falante": "prefeitura",
+      "atribuicao": "canal",
+      "canal": "monitor",
+      "inicioMs": 23800,
+      "fimMs": 28500,
+      "texto": "O recuo frontal mínimo é de 3 metros, e a taxa de protocolo é de R$ 3,85 por metro quadrado.",
+      "confianca": 0.97,
+      "descartadoPorEco": false,
+      "motivoDescarte": null,
+      "latenciaMs": 630,
+      "forcadoPorTamanho": false
+    },
+    {
+      "id": 7,
+      "falante": "prefeitura",
+      "atribuicao": "canal",
+      "canal": "monitor",
+      "inicioMs": 29000,
+      "fimMs": 33500,
+      "texto": "Eu consigo enviar a planta de zoneamento atualizada até quinta-feira.",
+      "confianca": 0.96,
+      "descartadoPorEco": false,
+      "motivoDescarte": null,
+      "latenciaMs": 590,
+      "forcadoPorTamanho": false
+    }
+  ],
+  "eventos": [
+    {
+      "tMs": 0,
+      "tipo": "reuniao_iniciada",
+      "detalhe": "Sessão iniciada com microfone e monitor conectados"
+    },
+    {
+      "tMs": 18600,
+      "tipo": "aviso",
+      "detalhe": "Eco acústico detectado e filtrado no microfone por deduplicação de texto"
+    },
+    {
+      "tMs": 34000,
+      "tipo": "encerrada",
+      "detalhe": "Reunião finalizada com sucesso pela usuária"
+    }
+  ],
+  "estatisticas": {
+    "segmentos": 7,
+    "descartadosPorEco": 1,
+    "duracaoMs": 34000,
+    "porFalante": {
+      "implantadora": 3,
+      "prefeitura": 4,
+      "indefinido": 0
+    },
+    "latenciaMedianaMs": 590
+  }
+}

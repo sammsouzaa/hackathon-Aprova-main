@@ -1,0 +1,31 @@
+De: Marcos Vieira <almoxarifado.quimica@ifpr.example>
+Para: Gabriel <implantacao@meulab.example>
+Cc: Helena Duarte <coord.laboratorios@ifpr.example>
+Data: 17/10/2026 16:42
+Assunto: Inventário + como funciona hoje
+
+Oi Gabriel, tudo bem?
+
+Segue em anexo o inventário do almoxarifado de Química (planilha). Ainda tem coisa sem estoque mínimo,
+porque a gente nunca controlou isso direito.
+
+Explicando como é hoje pra você entender a dor:
+- O professor manda e-mail ou fala no corredor. Às vezes manda o pedido na véspera, às 22h.
+- Eu anoto numa planilha compartilhada e confiro no armário na hora. Se falta reagente, eu descubro na montagem.
+- Para separar a quantidade, eu faço a conta na mão: por exemplo, 10 grupos x 50 mL de etanol.
+- Na Química Orgânica, a capela vira gargalo. Tem semana que três professores querem usar no mesmo horário.
+
+Sobre o tempo de preparo, meu chute é:
+- prática simples (titulação, diluição): uns 30 minutos antes;
+- prática com aquecimento ou capela: pelo menos 1 hora;
+- desmontagem e limpeza: 20 a 30 minutos.
+Mas isso eu queria confirmar com a Profa. Helena antes de virar regra.
+
+Resíduos: hoje separamos solventes orgânicos e "o resto". Acho que vale usar as categorias do sistema
+(solventes, oxidantes, metais pesados, inorgânicos, outros), mas não sei se a coleta aceita essa separação.
+
+Uma dúvida minha: quando a prática for reagendada, o material que eu já separei fica reservado ou volta pro estoque?
+
+Abraço,
+Marcos Vieira
+Técnico de Laboratório · Almoxarifado de Química · IFPR Cascavel

@@ -1,0 +1,140 @@
+/*
+ * aprova-tokens.css — tokens de design inspirados nos produtos públicos da Aprova.
+ * Independente de stack (CSS puro). Em Tailwind v4: copie para @theme; em Tailwind v3: mapeie em theme.extend.
+ *
+ * Etiquetas (detalhes e fontes em design-system-aprova.md e pesquisa-design-aprova.md):
+ *   [CONF] valor literal publicado em fonte oficial pública (Storybook ADS, CSS da plataforma, CSS do site/app de IA)
+ *   [REC]  escolha do kit para o protótipo (NÃO é regra da Aprova)
+ * Nada aqui é guia de marca. Não use logotipo, nome "Aprova" como produto, brasões nem capturas.
+ * Fonte: Inter, instalada LOCALMENTE (ex.: npm i @fontsource-variable/inter  — [NV] não executado). Sem CDN no evento.
+ */
+
+:root {
+  /* ── Paleta Aprova [CONF] (--Aprova---nn na plataforma) ───────────── */
+  --ap-teal-10:  #f6fbfb;
+  --ap-teal-20:  #e0f6f7;
+  --ap-teal-30:  #c2f2f5;
+  --ap-cyan-40:  #00dae7;   /* destaque; texto sobre ele: #020a0f */
+  --ap-teal-50:  #16cfda;
+  --ap-teal-60:  #14bac4;
+  --ap-teal-70:  #11aab3;
+  --ap-teal-80:  #12949c;
+  --ap-teal-85:  #10838a;
+  --ap-teal-90:  #0d787e;   /* fundo invertido do ADS; branco sobre ele = 5,24:1 */
+  --ap-teal-100: #074a4e;   /* texto de marca; hover forte */
+  --ap-brand:    #06929f;   /* botão padrão do ADS (Storybook); branco sobre ele = 3,74:1 */
+  --ap-brand-deep: #003a40; /* hover do botão no ADS */
+  --ap-ink:      #020a0f;
+
+  /* ── Cinzas [CONF] (--Greyscale---nn) ────────────────────────────── */
+  --ap-grey-0:   #ffffff;
+  --ap-grey-10:  #f5f7f7;
+  --ap-grey-20:  #eef0f0;
+  --ap-grey-30:  #dee0e0;
+  --ap-grey-40:  #cacccc;
+  --ap-grey-50:  #aeb0b0;
+  --ap-grey-60:  #9a9c9c;
+  --ap-grey-70:  #868787;
+  --ap-grey-75:  #6b6b6b;
+  --ap-grey-80:  #656666;
+  --ap-grey-90:  #404141;
+  --ap-grey-100: #1c1c1c;
+
+  /* ── Semânticas [CONF] (escalas Green/Orange/Red/Blue do ADS) ────── */
+  --ap-success-bg: #eefff9; --ap-success-strong: #19bf8b; --ap-success-text: #055b40; --ap-success-border: #059669;
+  --ap-warning-bg: #ffefe7; --ap-warning-strong: #ea580c; --ap-warning-text: #702600; --ap-warning-border: #983400;
+  --ap-error-bg:   #ffebeb; --ap-error-strong:   #dc2626; --ap-error-text:   #ba1515; --ap-error-border:   #dc2626;
+  --ap-info-bg:    #ebf4ff; --ap-info-strong:    #1d74d8; --ap-info-text:    #0856af; --ap-info-border:    #0856af;
+  /* *-strong servem para ícone/fundo; NÃO use como cor de texto sobre branco (contraste < 4,5:1, exceto error/info) */
+  --ap-disabled-bg: #a9acb1; --ap-disabled-text: #d4d5d8;   /* Support-Disabled do ADS */
+
+  /* ── IA [CONF] (app Aprova IA) ───────────────────────────────────── */
+  --ap-ia: #0891b2; --ap-ia-text: #0e7490; --ap-ia-bg: #e6f5f8;  /* ia-bg: aproximação sRGB de oklch(96.5% .02 215) */
+
+  /* ── Papéis semânticos [CONF mapeamento do ADS] + [REC] onde indicado ── */
+  --bg-page:        var(--ap-grey-10);   /* Background-Neutral-Primary */
+  --bg-surface:     var(--ap-grey-0);    /* Background-Neutral-White */
+  --bg-muted:       var(--ap-grey-20);
+  --bg-brand-soft:  var(--ap-teal-20);   /* Background-Aprova-Tertiary */
+  --text-primary:   var(--ap-grey-100);  /* Text-Neutral-Primary */
+  --text-secondary: var(--ap-grey-80);   /* Text-Neutral-Secondary (5,76:1 sobre branco) */
+  --text-tertiary:  var(--ap-grey-75);   /* Text-Neutral-Tertiary (5,33:1) — mínimo 14 px */
+  --text-disabled:  var(--ap-grey-50);
+  --text-brand:     var(--ap-teal-100);  /* Text-Aprova-Primary */
+  --border-strong:  var(--ap-grey-70);   /* Border-Neutral-Primary: contorno de botão secundário */
+  --border:         var(--ap-grey-40);   /* Border-Neutral-Secondary: cartões e cabeçalho */
+  --border-subtle:  var(--ap-grey-30);   /* Border-Neutral-Tertiary: divisores */
+  --action:         var(--ap-teal-90);   /* [REC] botão de marca COM texto (AA). Original do ADS: --ap-brand (#06929f) */
+  --action-hover:   var(--ap-teal-100);
+  --action-text:    #ffffff;
+  --action-neutral: var(--ap-grey-100);  /* botão primário de página no portal atual [CONF] */
+  --focus-ring:     var(--ap-grey-100);  /* Focus-Ring */
+  --focus-offset:   #ffffff;
+
+  /* ── Tipografia [CONF: Inter, escala ads-*] ──────────────────────── */
+  --font-sans: "Inter", "Inter Variable", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --fs-h1: 56px; --lh-h1: 64px;   /* ads-h1 */
+  --fs-h2: 48px; --lh-h2: 54px;
+  --fs-h3: 40px; --lh-h3: 48px;
+  --fs-h4: 32px; --lh-h4: 40px;
+  --fs-h5: 24px; --lh-h5: 32px;
+  --fs-h6: 20px; --lh-h6: 28px;
+  --fs-body: 16px; --lh-body: 24px;      /* ads-body-paragraph */
+  --fs-small: 14px; --lh-small: 20px;    /* ads-body-small */
+  --fs-xsmall: 12px; --lh-xsmall: 16px;  /* ads-body-extra-small */
+  --fs-btn-lg: 18px; --fs-btn-md: 16px; --fs-btn-sm: 14px;
+  --fw-regular: 400; --fw-medium: 500; --fw-semibold: 600; --fw-bold: 700;
+  /* [REC] botão/rótulo: 500 ou 600. O ADS publica font-weight:100 no botão (provável defeito): não replique. */
+
+  /* ── Espaçamento, traço e raio [CONF] ────────────────────────────── */
+  --sp-2xs: 2px;  --sp-xs: 4px;  --sp-s: 8px;   --sp-m: 12px; --sp-l: 16px;
+  --sp-xl: 20px;  --sp-2xl: 24px; --sp-3xl: 28px; --sp-4xl: 32px; --sp-5xl: 40px; --sp-6xl: 48px;
+  --stroke-xs: .5px; --stroke-s: 1px; --stroke-m: 2px; --stroke-l: 4px;
+  --radius-xs: 4px; --radius-s: 8px;   /* controles: botão, campo */
+  --radius-m: 12px; --radius-l: 16px;  /* contêineres: cartão, bloco */
+  --radius-xl: 24px; --radius-full: 999px;
+  --radius-alert: 10px;                /* Alert do ADS */
+
+  /* ── Altura dos controles [CONF: Button do ADS e portal] ─────────── */
+  --control-sm: 36px; --control-md: 44px; --control-lg: 60px; --control-search: 50px;
+
+  /* ── Sombra e movimento ──────────────────────────────────────────── */
+  --shadow-float: 0 8px 24px rgba(0, 0, 0, .16);          /* botão de chat do portal [CONF] */
+  --shadow-alert: 2px 5px 15px rgba(0, 0, 0, .2);         /* Alert do ADS [CONF] */
+  --dur-fast: 150ms; --dur-panel: 250ms;                  /* [REC] a partir de site e app de IA */
+  --ease: cubic-bezier(.4, 0, .2, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --dur-fast: 0ms; --dur-panel: 0ms; }
+}
+
+/* ── Exemplos mínimos de uso (opcional; apague se usar componentes próprios) ── */
+body { font-family: var(--font-sans); font-size: var(--fs-small); line-height: var(--lh-small);
+       color: var(--text-primary); background: var(--bg-page); }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--sp-s);
+       height: var(--control-md); padding-inline: 20px;
+       border: 0; border-radius: var(--radius-s); font: var(--fw-medium) var(--fs-btn-md)/1 var(--font-sans);
+       cursor: pointer; transition: background-color var(--dur-fast) var(--ease); }
+.btn--sm { height: var(--control-sm); padding-inline: 16px; font-size: var(--fs-btn-sm); }
+.btn--lg { height: var(--control-lg); padding-inline: 24px; font-size: var(--fs-btn-lg); }
+.btn--primary { background: var(--action); color: var(--action-text); }
+.btn--primary:hover { background: var(--action-hover); }
+.btn--neutral { background: var(--action-neutral); color: #fff; }
+.btn--outline { background: #fff; color: var(--text-secondary); border: var(--stroke-s) solid var(--border-strong); }
+.btn:disabled { background: var(--ap-disabled-bg); color: var(--ap-disabled-text); cursor: not-allowed; }
+.btn:focus-visible, .field__input:focus-visible { outline: 2px solid var(--focus-ring); outline-offset: 2px;
+       box-shadow: 0 0 0 4px var(--focus-offset); }
+
+.card { background: var(--bg-surface); border: var(--stroke-s) solid var(--border);
+        border-radius: var(--radius-l); padding: var(--sp-2xl); }
+.field__label { display: block; margin-bottom: var(--sp-xs); font-weight: var(--fw-medium); color: var(--text-primary); }
+.field__input { width: 100%; height: var(--control-md); padding: 0 14px; background: #fff;
+        border: var(--stroke-s) solid #c4cbd1; border-radius: var(--radius-s); font: inherit; font-size: var(--fs-body); }
+.badge { display: inline-flex; align-items: center; gap: 6px; padding: 2px 10px; border-radius: var(--radius-full);
+        font-size: var(--fs-xsmall); font-weight: var(--fw-medium); }
+.badge--success { background: var(--ap-success-bg); color: var(--ap-success-text); }
+.badge--warning { background: var(--ap-warning-bg); color: var(--ap-warning-text); }
+.badge--error   { background: var(--ap-error-bg);   color: var(--ap-error-text); }
+.badge--info    { background: var(--ap-info-bg);    color: var(--ap-info-text); }

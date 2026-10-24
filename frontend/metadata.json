@@ -1,0 +1,6 @@
+{
+  "name": "GovTech Workspace - Implantação de Processos",
+  "description": "Workspace de implantação e parametrização de processos governamentais integrando WhatsApp de fiscais, matriz viva de regras da IA de contexto e agente construtor do sistema.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

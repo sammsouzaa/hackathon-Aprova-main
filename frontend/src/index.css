@@ -1,0 +1,315 @@
+@import "tailwindcss";
+
+/* 
+ * Aprova Design System (ADS) - Tokens Oficiais de docs/aprova-tokens.css
+ * Aplicados em todo o workspace para total conformidade de design.
+ */
+@theme {
+  --color-ap-teal-10: #f6fbfb;
+  --color-ap-teal-20: #e0f6f7;
+  --color-ap-teal-30: #c2f2f5;
+  --color-ap-cyan-40: #00dae7;
+  --color-ap-teal-50: #16cfda;
+  --color-ap-teal-60: #14bac4;
+  --color-ap-teal-70: #11aab3;
+  --color-ap-teal-80: #12949c;
+  --color-ap-teal-85: #10838a;
+  --color-ap-teal-90: #0d787e;
+  --color-ap-teal-100: #074a4e;
+  --color-ap-brand: #06929f;
+  --color-ap-brand-deep: #003a40;
+  --color-ap-ink: #020a0f;
+
+  --color-ap-grey-0: #ffffff;
+  --color-ap-grey-10: #f5f7f7;
+  --color-ap-grey-20: #eef0f0;
+  --color-ap-grey-30: #dee0e0;
+  --color-ap-grey-40: #cacccc;
+  --color-ap-grey-50: #aeb0b0;
+  --color-ap-grey-60: #9a9c9c;
+  --color-ap-grey-70: #868787;
+  --color-ap-grey-75: #6b6b6b;
+  --color-ap-grey-80: #656666;
+  --color-ap-grey-90: #404141;
+  --color-ap-grey-100: #1c1c1c;
+
+  --color-ap-ia: #0891b2;
+  --color-ap-ia-text: #0e7490;
+  --color-ap-ia-bg: #e6f5f8;
+}
+
+:root {
+  /* ── Paleta Aprova [CONF] (--Aprova---nn na plataforma) ───────────── */
+  --ap-teal-10:  #f6fbfb;
+  --ap-teal-20:  #e0f6f7;
+  --ap-teal-30:  #c2f2f5;
+  --ap-cyan-40:  #00dae7;   /* destaque; texto sobre ele: #020a0f */
+  --ap-teal-50:  #16cfda;
+  --ap-teal-60:  #14bac4;
+  --ap-teal-70:  #11aab3;
+  --ap-teal-80:  #12949c;
+  --ap-teal-85:  #10838a;
+  --ap-teal-90:  #0d787e;   /* fundo invertido do ADS; branco sobre ele = 5,24:1 (Aprovado AA) */
+  --ap-teal-100: #074a4e;   /* texto de marca; hover forte */
+  --ap-brand:    #06929f;   /* botão padrão do ADS (Storybook); branco sobre ele = 3,74:1 */
+  --ap-brand-deep: #003a40; /* hover do botão no ADS */
+  --ap-ink:      #020a0f;
+
+  /* ── Cinzas [CONF] (--Greyscale---nn) ────────────────────────────── */
+  --ap-grey-0:   #ffffff;
+  --ap-grey-10:  #f5f7f7;
+  --ap-grey-20:  #eef0f0;
+  --ap-grey-30:  #dee0e0;
+  --ap-grey-40:  #cacccc;
+  --ap-grey-50:  #aeb0b0;
+  --ap-grey-60:  #9a9c9c;
+  --ap-grey-70:  #868787;
+  --ap-grey-75:  #6b6b6b;
+  --ap-grey-80:  #656666;
+  --ap-grey-90:  #404141;
+  --ap-grey-100: #1c1c1c;
+
+  /* ── Semânticas [CONF] (escalas Green/Orange/Red/Blue do ADS) ────── */
+  --ap-success-bg: #eefff9; --ap-success-strong: #19bf8b; --ap-success-text: #055b40; --ap-success-border: #059669;
+  --ap-warning-bg: #ffefe7; --ap-warning-strong: #ea580c; --ap-warning-text: #702600; --ap-warning-border: #983400;
+  --ap-error-bg:   #ffebeb; --ap-error-strong:   #dc2626; --ap-error-text:   #ba1515; --ap-error-border:   #dc2626;
+  --ap-info-bg:    #ebf4ff; --ap-info-strong:    #1d74d8; --ap-info-text:    #0856af; --ap-info-border:    #0856af;
+  --ap-disabled-bg: #a9acb1; --ap-disabled-text: #d4d5d8;   /* Support-Disabled do ADS */
+
+  /* ── IA [CONF] (app Aprova IA) ───────────────────────────────────── */
+  --ap-ia: #0891b2; --ap-ia-text: #0e7490; --ap-ia-bg: #e6f5f8;
+
+  /* ── Papéis semânticos [CONF mapeamento do ADS] + [REC] onde indicado ── */
+  --bg-page:        var(--ap-grey-10);   /* Background-Neutral-Primary */
+  --bg-surface:     var(--ap-grey-0);    /* Background-Neutral-White */
+  --bg-muted:       var(--ap-grey-20);
+  --bg-brand-soft:  var(--ap-teal-20);   /* Background-Aprova-Tertiary */
+  --text-primary:   var(--ap-grey-100);  /* Text-Neutral-Primary */
+  --text-secondary: var(--ap-grey-80);   /* Text-Neutral-Secondary (5,76:1 sobre branco) */
+  --text-tertiary:  var(--ap-grey-75);   /* Text-Neutral-Tertiary (5,33:1) — mínimo 14 px */
+  --text-disabled:  var(--ap-grey-50);
+  --text-brand:     var(--ap-teal-100);  /* Text-Aprova-Primary */
+  --border-strong:  var(--ap-grey-70);   /* Border-Neutral-Primary: contorno de botão secundário */
+  --border:         var(--ap-grey-40);   /* Border-Neutral-Secondary: cartões e cabeçalho */
+  --border-subtle:  var(--ap-grey-30);   /* Border-Neutral-Tertiary: divisores */
+  --action:         var(--ap-teal-90);   /* [REC] botão de marca COM texto (AA). Original do ADS: --ap-brand (#06929f) */
+  --action-hover:   var(--ap-teal-100);
+  --action-text:    #ffffff;
+  --action-neutral: var(--ap-grey-100);  /* botão primário de página no portal atual [CONF] */
+  --focus-ring:     var(--ap-grey-100);  /* Focus-Ring */
+  --focus-offset:   #ffffff;
+
+  /* ── Tipografia [CONF: Inter, escala ads-*] ──────────────────────── */
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --fs-h1: 56px; --lh-h1: 64px;
+  --fs-h2: 48px; --lh-h2: 54px;
+  --fs-h3: 40px; --lh-h3: 48px;
+  --fs-h4: 32px; --lh-h4: 40px;
+  --fs-h5: 24px; --lh-h5: 32px;
+  --fs-h6: 20px; --lh-h6: 28px;
+  --fs-body: 16px; --lh-body: 24px;
+  --fs-small: 14px; --lh-small: 20px;
+  --fs-xsmall: 12px; --lh-xsmall: 16px;
+  --fs-btn-lg: 18px; --fs-btn-md: 16px; --fs-btn-sm: 14px;
+  --fw-regular: 400; --fw-medium: 500; --fw-semibold: 600; --fw-bold: 700;
+
+  /* ── Espaçamento, traço e raio [CONF] ────────────────────────────── */
+  --sp-2xs: 2px;  --sp-xs: 4px;  --sp-s: 8px;   --sp-m: 12px; --sp-l: 16px;
+  --sp-xl: 20px;  --sp-2xl: 24px; --sp-3xl: 28px; --sp-4xl: 32px; --sp-5xl: 40px; --sp-6xl: 48px;
+  --stroke-xs: .5px; --stroke-s: 1px; --stroke-m: 2px; --stroke-l: 4px;
+  --radius-xs: 4px; --radius-s: 8px;   /* controles: botão, campo */
+  --radius-m: 12px; --radius-l: 16px;  /* contêineres: cartão, bloco */
+  --radius-xl: 24px; --radius-full: 999px;
+  --radius-alert: 10px;                /* Alert do ADS */
+
+  /* ── Altura dos controles [CONF: Button do ADS e portal] ─────────── */
+  --control-sm: 36px; --control-md: 44px; --control-lg: 60px; --control-search: 50px;
+
+  /* ── Sombra e movimento ──────────────────────────────────────────── */
+  --shadow-float: 0 8px 24px rgba(0, 0, 0, .16);          /* botão de chat do portal [CONF] */
+  --shadow-alert: 2px 5px 15px rgba(0, 0, 0, .2);         /* Alert do ADS [CONF] */
+  --dur-fast: 150ms; --dur-panel: 250ms;
+  --ease: cubic-bezier(.4, 0, .2, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --dur-fast: 0ms; --dur-panel: 0ms; }
+}
+
+/* ── Estilos de base oficiais do Aprova Design System ── */
+body {
+  font-family: var(--font-sans);
+  font-size: var(--fs-small);
+  line-height: var(--lh-small);
+  color: var(--text-primary);
+  background-color: var(--bg-page);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Classes utilitárias do Design System (docs/aprova-tokens.css) ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-s);
+  height: var(--control-md);
+  padding-inline: 20px;
+  border: 0;
+  border-radius: var(--radius-s);
+  font-family: var(--font-sans);
+  font-size: var(--fs-btn-md);
+  font-weight: var(--fw-medium);
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color var(--dur-fast) var(--ease), border-color var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease);
+}
+.btn--sm {
+  height: var(--control-sm);
+  padding-inline: 16px;
+  font-size: var(--fs-btn-sm);
+}
+.btn--lg {
+  height: var(--control-lg);
+  padding-inline: 24px;
+  font-size: var(--fs-btn-lg);
+}
+.btn--primary {
+  background-color: var(--action);
+  color: var(--action-text);
+}
+.btn--primary:hover {
+  background-color: var(--action-hover);
+}
+.btn--neutral {
+  background-color: var(--action-neutral);
+  color: #ffffff;
+}
+.btn--neutral:hover {
+  background-color: var(--ap-grey-90);
+}
+.btn--outline {
+  background-color: #ffffff;
+  color: var(--text-secondary);
+  border: var(--stroke-s) solid var(--border-strong);
+}
+.btn--outline:hover {
+  background-color: var(--bg-muted);
+  color: var(--text-primary);
+}
+.btn:disabled {
+  background-color: var(--ap-disabled-bg);
+  color: var(--ap-disabled-text);
+  cursor: not-allowed;
+}
+.btn:focus-visible, .field__input:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px var(--focus-offset);
+}
+
+.card {
+  background-color: var(--bg-surface);
+  border: var(--stroke-s) solid var(--border);
+  border-radius: var(--radius-l);
+  padding: var(--sp-2xl);
+}
+.field__label {
+  display: block;
+  margin-bottom: var(--sp-xs);
+  font-weight: var(--fw-medium);
+  color: var(--text-primary);
+  font-size: var(--fs-small);
+}
+.field__input {
+  width: 100%;
+  height: var(--control-md);
+  padding: 0 14px;
+  background-color: #ffffff;
+  border: var(--stroke-s) solid #c4cbd1;
+  border-radius: var(--radius-s);
+  font: inherit;
+  font-size: var(--fs-body);
+  color: var(--text-primary);
+  transition: border-color var(--dur-fast) var(--ease);
+}
+.field__input:focus {
+  border-color: var(--action);
+  outline: none;
+}
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 10px;
+  border-radius: var(--radius-full);
+  font-size: var(--fs-xsmall);
+  font-weight: var(--fw-medium);
+}
+.badge--success {
+  background-color: var(--ap-success-bg);
+  color: var(--ap-success-text);
+  border: var(--stroke-s) solid rgba(5, 150, 105, 0.25);
+}
+.badge--warning {
+  background-color: var(--ap-warning-bg);
+  color: var(--ap-warning-text);
+  border: var(--stroke-s) solid rgba(234, 88, 12, 0.25);
+}
+.badge--error {
+  background-color: var(--ap-error-bg);
+  color: var(--ap-error-text);
+  border: var(--stroke-s) solid rgba(220, 38, 38, 0.25);
+}
+.badge--info {
+  background-color: var(--ap-info-bg);
+  color: var(--ap-info-text);
+  border: var(--stroke-s) solid rgba(29, 116, 216, 0.25);
+}
+.badge--ia {
+  background-color: var(--ap-ia-bg);
+  color: var(--ap-ia-text);
+  border: var(--stroke-s) solid rgba(8, 145, 178, 0.25);
+}
+
+/* Floating Launcher estilo Aprova Portal [CONF: 56px #10838a, sombra float] */
+.aprova-chat-launcher {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-full);
+  background-color: var(--ap-teal-85);
+  color: #ffffff;
+  box-shadow: var(--shadow-float);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--dur-fast) var(--ease), background-color var(--dur-fast) var(--ease);
+  cursor: pointer;
+  border: none;
+}
+.aprova-chat-launcher:hover {
+  background-color: var(--ap-teal-90);
+  transform: scale(1.05);
+}
+
+/* Scrollbar limpo compatível com ADS */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--ap-grey-40);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ap-grey-60);
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

@@ -1,0 +1,34 @@
+{
+  "glossario": [
+    "MeuLab", "IFPR Cascavel", "Instituto Federal do Paraná – Campus Cascavel", "Helena Duarte", "Marcos Vieira",
+    "Rafael Nogueira", "Luana Ferraz", "Gabriel", "almoxarifado", "reagente", "vidraria", "bancada",
+    "capela de exaustão", "espectrofotômetro", "balança analítica", "béquer", "erlenmeyer", "bureta",
+    "fenolftaleína", "permanganato de potássio", "acetona P.A.", "titulação", "TCC", "roteiro experimental",
+    "checklist de bancada", "reagendamento", "estoque mínimo", "resíduos", "solventes orgânicos",
+    "oxidantes", "metais pesados", "Química Geral", "Química Orgânica", "Microbiologia", "Bioquímica",
+    "Anatomia", "Física Experimental", "PT-2026-031", "@ifpr.edu.br"
+  ],
+  "perguntas_rapidas": [
+    "Qual a antecedência mínima da reserva?",
+    "Quanto tempo de preparo entre práticas?",
+    "Quem aprova a prática?",
+    "Quais equipamentos bloqueiam no TCC?",
+    "Quais laboratórios entram no piloto?"
+  ],
+  "checklist": [
+    {"titulo": "Laboratórios do piloto", "pergunta": "Quais laboratórios participam do piloto?", "categoria": "Escopo", "obrigatoria": true, "valor_referencia": "Química Geral e Química Orgânica", "confirmado_no_contexto": true, "resposta_contexto": "Química Geral e Química Orgânica (kickoff 10/10)", "origem": "ia"},
+    {"titulo": "Perfis de acesso", "pergunta": "Quais perfis de usuário a plataforma terá e quem é o administrador?", "categoria": "Permissões", "obrigatoria": true, "valor_referencia": "Docente, técnico e administrador", "confirmado_no_contexto": true, "resposta_contexto": "Docente, técnico e administrador; Profa. Helena é a administradora", "origem": "ia"},
+    {"titulo": "Forma de login", "pergunta": "Como os usuários vão acessar a plataforma?", "categoria": "Tecnologia", "obrigatoria": true, "valor_referencia": "E-mail institucional", "confirmado_no_contexto": true, "resposta_contexto": "E-mail institucional @ifpr.edu.br", "origem": "ia"},
+    {"titulo": "Movimentação de estoque", "pergunta": "Quem pode dar entrada e baixa no estoque?", "categoria": "Permissões", "obrigatoria": true, "valor_referencia": "Somente técnicos", "confirmado_no_contexto": true, "resposta_contexto": "Somente técnicos do almoxarifado", "origem": "ia"},
+    {"titulo": "Antecedência mínima da reserva", "pergunta": "Com quantas horas de antecedência o docente precisa solicitar a reserva?", "categoria": "Regras da agenda", "obrigatoria": true, "valor_referencia": "72 h (Marcos) ou 48 h (Prof. Rafael)", "origem": "ia"},
+    {"titulo": "Tempo de preparo por tipo de prática", "pergunta": "Qual o tempo de preparo e de desmontagem por tipo de prática?", "categoria": "Regras da agenda", "obrigatoria": true, "valor_referencia": "30 min simples · 1 h capela · 20–30 min desmontagem", "origem": "ia"},
+    {"titulo": "Responsável pela aprovação", "pergunta": "Quem aprova as práticas, e reagentes controlados exigem aval da coordenação?", "categoria": "Workflow", "obrigatoria": true, "valor_referencia": "Técnico (coordenação em controlados?)", "origem": "ia"},
+    {"titulo": "Bloqueios para TCC", "pergunta": "Quais equipamentos e horários ficam bloqueados para TCC?", "categoria": "Regras da agenda", "obrigatoria": true, "valor_referencia": "Espectrofotômetro UV-Vis?", "origem": "ia"},
+    {"titulo": "Material em reagendamento", "pergunta": "Ao reagendar uma prática, o material já separado continua reservado ou volta ao estoque?", "categoria": "Insumos", "obrigatoria": true, "valor_referencia": null, "origem": "ia"},
+    {"titulo": "Estoque mínimo dos itens sem valor", "pergunta": "Qual o estoque mínimo do NaOH 0,1 mol/L, do permanganato e das buretas?", "categoria": "Insumos", "obrigatoria": false, "valor_referencia": "Não informado na planilha", "origem": "ia"},
+    {"titulo": "Categorias e coleta de resíduos", "pergunta": "Quais categorias de resíduo serão usadas e qual a periodicidade da coleta?", "categoria": "Resíduos", "obrigatoria": false, "valor_referencia": "5 categorias do sistema; periodicidade desconhecida", "origem": "ia"},
+    {"titulo": "Laboratório de Anatomia na Fase 1", "pergunta": "O Laboratório de Anatomia entra na Fase 1?", "categoria": "Escopo", "obrigatoria": false, "valor_referencia": "6 laboratórios (preliminar)", "origem": "ia"},
+    {"titulo": "Integração com o sistema acadêmico", "pergunta": "A grade de turmas será importada do sistema acadêmico?", "categoria": "Tecnologia", "obrigatoria": false, "valor_referencia": "Fora da proposta; Luana verificando", "origem": "ia"},
+    {"titulo": "Escopo da Fase 2", "pergunta": "O Repositório de Práticas entra na Fase 2 e quando?", "categoria": "Escopo", "obrigatoria": false, "valor_referencia": "A definir", "origem": "ia"}
+  ]
+}

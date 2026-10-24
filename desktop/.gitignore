@@ -1,0 +1,15 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+
+release/
+.tmp/
+
+# Dados e Modelos locais
+modelos/
+dados/transcricoes/*.json

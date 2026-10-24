@@ -1,0 +1,100 @@
+{
+  "name": "prumo-desktop",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port=3000 --host=0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview",
+    "clean": "rm -rf dist",
+    "lint": "tsc --noEmit",
+    "electron:dev": "node scripts/electron-dev.mjs",
+    "electron:start": "vite build && electron .",
+    "electron:smoke": "vite build && node scripts/electron-smoke.mjs",
+    "electron:smoke:aovivo": "vite build && node scripts/electron-smoke.mjs aovivo",
+    "electron:pack": "vite build && electron-builder --dir",
+    "electron:dist": "vite build && electron-builder --linux",
+    "icones": "electron scripts/gerar-icones.cjs",
+    "modelos": "node scripts/baixar-modelos.mjs",
+    "teste:segmentacao": "node --test \"scripts/teste/segmentacao*.teste.ts\"",
+    "teste:stt": "node --test --test-concurrency=1 \"scripts/teste/stt*.teste.ts\" \"scripts/teste/stt*.teste.mjs\"",
+    "teste:sessao": "node --test \"scripts/teste/sessao*.teste.ts\" \"scripts/teste/transcricoes*.teste.mjs\"",
+    "validar:transcricao": "node scripts/validar-transcricao.mjs",
+    "teste:aovivo": "node --test \"scripts/teste/aovivo*.teste.ts\""
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.3.0",
+    "@huggingface/transformers": "^4.3.1",
+    "@tailwindcss/vite": "^4.3.3",
+    "@vitejs/plugin-react": "^6.1.1",
+    "lucide-react": "^0.546.0",
+    "react": "^19.0.1",
+    "react-dom": "^19.0.1",
+    "vite": "^8.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "electron": "^45.0.0",
+    "electron-builder": "^26.18.0",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^7.0.2"
+  },
+  "description": "Prumo: mascote de reunião para implantadores, em janela compacta de desktop (Electron).",
+  "author": {
+    "name": "Equipe Prumo",
+    "email": "prumo@example.invalid"
+  },
+  "homepage": "https://github.com/prumo/prumo-desktop",
+  "main": "electron/main.mjs",
+  "build": {
+    "appId": "br.com.prumo.desktop",
+    "productName": "Prumo",
+    "copyright": "Protótipo demonstrativo · dados fictícios",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "package.json",
+      "!node_modules/**/*"
+    ],
+    "asar": true,
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Office",
+      "icon": "electron/assets/icone.png",
+      "synopsis": "Mascote de reunião para implantadores",
+      "description": "Janela compacta que acompanha a reunião: checklist, alertas de contradição e compromissos. Protótipo demonstrativo com dados fictícios.",
+      "maintainer": "Equipe Prumo <prumo@example.invalid>",
+      "desktop": {
+        "entry": {
+          "Comment": "Mascote de reunião",
+          "Keywords": "reunião;implantação;checklist;",
+          "StartupNotify": "false"
+        }
+      },
+      "syncDesktopName": true
+    },
+    "asarUnpack": [
+      "**/node_modules/onnxruntime-node/**"
+    ],
+    "extraResources": [
+      {
+        "from": "modelos",
+        "to": "modelos",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ]
+  },
+  "license": "UNLICENSED",
+  "desktopName": "prumo-desktop.desktop"
+}

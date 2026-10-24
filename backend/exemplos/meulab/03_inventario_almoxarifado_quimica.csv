@@ -1,0 +1,13 @@
+codigo;item;tipo;unidade;estoque_atual;estoque_minimo;local;observacao
+REA-001;Etanol 70%;reagente;mL;18000;5000;Armário A1;mais usado nas práticas de Química Geral
+REA-002;Ácido clorídrico 1 mol/L;reagente;mL;6500;2000;Armário de ácidos;
+REA-003;Hidróxido de sódio 0,1 mol/L;reagente;mL;4200;;Armário A2;estoque mínimo a definir
+REA-004;Fenolftaleína 1%;reagente;mL;900;300;Armário A2;
+REA-005;Permanganato de potássio;reagente;g;250;;Armário de oxidantes;controlado? confirmar com coordenação
+REA-006;Acetona P.A.;reagente;mL;3000;1000;Armário de solventes;gera resíduo de solvente orgânico
+VID-010;Béquer 250 mL;vidraria;un;64;30;Bancada técnica 2;
+VID-011;Erlenmeyer 125 mL;vidraria;un;40;20;Bancada técnica 2;
+VID-012;Bureta 50 mL;vidraria;un;18;;Bancada técnica 1;12 em uso / 6 quebradas?
+EQP-020;Balança analítica;equipamento;un;3;;Sala de pesagem;uma em manutenção
+EQP-021;Capela de exaustão;equipamento;un;2;;Lab. Química Orgânica;equipamento crítico
+EQP-022;Espectrofotômetro UV-Vis;equipamento;un;1;;Lab. Química Orgânica;usado por TCC

@@ -1,0 +1,28 @@
+# segredos
+.env
+.env.*
+!.env.example
+
+# dependências e builds
+node_modules/
+venv/
+.venv/
+__pycache__/
+*.pyc
+dist/
+build/
+coverage/
+release/
+
+# dados gerados em execução
+backend/contextos/
+backend/sessoes/
+desktop/dados/transcricoes/*.json
+desktop/modelos/
+desktop/.tmp/
+
+# sistema / editor
+.DS_Store
+*.log
+.idea/
+.vscode/

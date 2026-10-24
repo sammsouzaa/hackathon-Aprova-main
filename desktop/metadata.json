@@ -1,0 +1,6 @@
+{
+  "name": "Prumo - Mascote de Reunião",
+  "description": "Painel compacto de acompanhamento inteligente de reuniões de regras de negócio para processos municipais.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

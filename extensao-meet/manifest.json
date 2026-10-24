@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "GovTech Copilot Meet",
+  "version": "1.2",
+  "description": "Captura o áudio da aba e do microfone, transcreve e acompanha a reunião com contexto e checklist (Gemini).",
+  "permissions": [
+    "tabCapture",
+    "offscreen",
+    "storage"
+  ],
+  "host_permissions": [
+    "http://localhost:8000/*",
+    "http://127.0.0.1:8000/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

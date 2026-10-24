@@ -1,0 +1,11 @@
+Roteiro para simular a reunião 2 de alinhamento do MeuLab (24/10). Cada linha vira um trecho de fala.
+Helena: Bom dia, Gabriel. Sobre a antecedência, a gente fechou internamente: vai ser 48 horas, não 72. O Marcos topou.
+Marcos: Topei, mas com uma condição: se a prática usar a capela, aí são 72 horas, porque eu preciso montar com calma.
+Marcos: E o tempo de preparo eu cronometrei essa semana. Prática simples dá 40 minutos, não 30. Com capela é uma hora e meia.
+Helena: Sobre aprovação: o técnico aprova tudo, mas se tiver permanganato ou qualquer controlado, eu preciso dar o ok também.
+Rafael: No TCC, o espectrofotômetro fica bloqueado terça e quinta à tarde, de agosto a novembro.
+Marcos: Quando reagenda, o material separado continua reservado por até 24 horas, depois volta pro estoque.
+Luana: Conversei com o fornecedor do sistema acadêmico: eles têm uma API, mas cobram à parte. Quero ver o orçamento antes de decidir.
+Helena: E a Anatomia fica fora da Fase 1. Ela não usa reagente, então não faz sentido agora.
+Marcos: A coleta de resíduos é quinzenal, e a empresa aceita sim separar oxidantes e metais pesados.
+Helena: Ah, e uma coisa que não estava na proposta: queremos um relatório mensal de consumo por disciplina para a diretoria.

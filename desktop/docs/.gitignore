@@ -1,0 +1,26 @@
+# Segredos e ambiente local: NUNCA versionar
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+secrets/
+# Node / projeto exportado do AI Studio
+prototipo/node_modules/
+prototipo/.env
+prototipo/.env.*
+!prototipo/.env.example
+prototipo/.next/
+prototipo/.cache/
+prototipo/coverage/
+# Atenção: prototipo/dist/ e prototipo/build/ (saída do build) NÃO são ignorados de propósito, para manter um build pronto
+# de reserva (ver referencias/publicacao-e-execucao.md §3 e FLUXO_DE_TRABALHO.md CONT-2); se preferir compilar na máquina
+# da demonstração, adicione essas linhas. Confira os nomes reais das pastas na auditoria.
+# Sistema e editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+*.log
+tmp/

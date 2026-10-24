@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      width: 400px;
+      max-height: 600px;
+      padding: 16px;
+      background: #0f172a;
+      color: #f8fafc;
+      overflow-y: auto;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #1e293b;
+    }
+    h3 {
+      font-size: 15px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .badge {
+      font-size: 10px;
+      background: #3b82f6;
+      color: #fff;
+      padding: 2px 6px;
+      border-radius: 999px;
+      font-weight: bold;
+    }
+    .interval-badge {
+      font-size: 11px;
+      color: #94a3b8;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .btn {
+      width: 100%;
+      padding: 11px;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 13px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+    .btn-start {
+      background: #10b981;
+      color: #022c22;
+    }
+    .btn-start:hover {
+      background: #059669;
+    }
+    .btn-stop {
+      background: #ef4444;
+      color: #fff;
+      display: none;
+    }
+    .btn-stop:hover {
+      background: #dc2626;
+    }
+    .status-container {
+      margin-top: 10px;
+      padding: 8px 10px;
+      background: #1e293b;
+      border-radius: 6px;
+      font-size: 11px;
+      color: #cbd5e1;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #64748b;
+    }
+    .pulse-dot.active {
+      background: #10b981;
+      box-shadow: 0 0 8px #10b981;
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+      0% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(1.2); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+    .card {
+      background: #1e293b;
+      padding: 12px;
+      border-radius: 8px;
+      margin-top: 12px;
+      font-size: 12px;
+      border-left: 3px solid #3b82f6;
+    }
+    .tag {
+      font-weight: 700;
+      color: #38bdf8;
+      display: block;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      font-size: 10px;
+      letter-spacing: 0.5px;
+    }
+    .content-box {
+      background: #0f172a;
+      padding: 8px;
+      border-radius: 6px;
+      margin-bottom: 8px;
+      color: #e2e8f0;
+      word-break: break-word;
+      line-height: 1.4;
+    }
+    .highlight-box {
+      border-left: 2px solid #eab308;
+      background: #1a1e29;
+      color: #fde047;
+      padding: 8px;
+      border-radius: 6px;
+      line-height: 1.4;
+    }
+    ul {
+      margin-left: 16px;
+      margin-top: 4px;
+    }
+    li {
+      margin-bottom: 4px;
+    }
+    .chunk-count {
+      font-size: 10px;
+      color: #64748b;
+      text-align: right;
+      margin-top: 6px;
+    }
+    .config {
+      background: #1e293b;
+      padding: 10px;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      font-size: 12px;
+      display: grid;
+      gap: 8px;
+    }
+    .config label {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      color: #94a3b8;
+    }
+    .config select, .config input[type=number], .linha input {
+      background: #0f172a;
+      border: 1px solid #334155;
+      color: #e2e8f0;
+      border-radius: 4px;
+      padding: 4px 6px;
+      font-size: 12px;
+    }
+    .config select { flex: 1; max-width: 220px; }
+    .config input[type=number] { width: 50px; text-align: center; color: #38bdf8; font-weight: bold; }
+    .progresso {
+      font-size: 10px;
+      color: #94a3b8;
+      float: right;
+      text-transform: none;
+      letter-spacing: 0;
+    }
+    .check {
+      list-style: none;
+      margin: 0;
+    }
+    .check li {
+      display: flex;
+      gap: 6px;
+      align-items: flex-start;
+      padding: 5px 4px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin: 0;
+    }
+    .check li:hover { background: #0f172a; }
+    .check .ico { width: 14px; flex-shrink: 0; text-align: center; }
+    .check .resp { display: block; color: #94a3b8; font-size: 10px; margin-top: 2px; }
+    .check .obrig { color: #f87171; font-weight: bold; }
+    .check li.respondida .perg { color: #64748b; text-decoration: line-through; }
+    .linha {
+      display: flex;
+      gap: 6px;
+      margin-top: 6px;
+    }
+    .linha input { flex: 1; padding: 6px; }
+    .linha button {
+      background: #3b82f6;
+      border: none;
+      color: #fff;
+      border-radius: 4px;
+      padding: 0 10px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+    .resposta-chat {
+      margin-top: 6px;
+      font-size: 11px;
+      white-space: pre-wrap;
+    }
+    .vazio { color: #64748b; font-style: italic; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h3>🎙️ Copiloto Meet</h3>
+    <span class="badge">Gemini Flash</span>
+  </div>
+
+  <div class="config" id="config">
+    <label>📁 Contexto:
+      <select id="selContexto"><option value="">(sem contexto)</option></select>
+    </label>
+    <label>🎙️ Gravar meu microfone
+      <input type="checkbox" id="chkMic" checked>
+    </label>
+    <label>⏱️ Trecho máximo (corta antes, na pausa):
+      <span><input type="number" id="inputIntervalo" min="4" max="30" value="10"> seg</span>
+    </label>
+  </div>
+
+  <button id="btnGravar" class="btn btn-start">▶ Iniciar Escuta da Aba</button>
+  <button id="btnParar" class="btn btn-stop">⏹ Parar Escuta</button>
+
+  <div class="status-container">
+    <div id="statusDot" class="pulse-dot"></div>
+    <span id="statusTxt">Status: Parado</span>
+  </div>
+
+  <div id="resultado" class="card" style="display:none;">
+    <div>
+      <span class="tag" style="color: #facc15;">💡 Pergunte agora:</span>
+      <div id="txtPergunta" class="highlight-box">-</div>
+    </div>
+
+    <div style="margin-top: 8px;">
+      <span class="tag">Próximas perguntas sugeridas:</span>
+      <div id="txtSugeridas" class="content-box" style="font-size: 11px;">-</div>
+    </div>
+
+    <div style="margin-top: 8px;">
+      <span class="tag" style="color: #4ade80;">✅ Checklist <span id="txtProgresso" class="progresso"></span></span>
+      <div class="content-box" style="font-size: 11px; padding: 4px;">
+        <ul id="lstChecklist" class="check"></ul>
+        <div class="linha">
+          <input id="inputItem" placeholder="Nova pergunta para o checklist">
+          <button id="btnItem">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 8px;">
+      <span class="tag" style="color: #c084fc;">📝 Anotações:</span>
+      <div class="content-box" style="font-size: 11px;">
+        <div id="txtAnotacoes">-</div>
+        <div class="linha">
+          <input id="inputNota" placeholder="Anotar algo">
+          <button id="btnNota">Anotar</button>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 8px;">
+      <span class="tag" style="color: #38bdf8;">🤖 Perguntar ao copiloto:</span>
+      <div class="content-box" style="font-size: 11px;">
+        <div class="linha" style="margin-top: 0;">
+          <input id="inputChat" placeholder="Ex.: o que ele falou sobre o prazo?">
+          <button id="btnChat">Enviar</button>
+        </div>
+        <div id="txtChat" class="resposta-chat"></div>
+      </div>
+    </div>
+
+    <div style="margin-top: 8px;">
+      <span class="tag">Última transcrição:</span>
+      <div id="txtTranscricao" class="content-box">-</div>
+    </div>
+
+    <div style="margin-top: 8px;">
+      <span class="tag" style="color: #4ade80;">📋 Regras identificadas:</span>
+      <div id="txtRegras" class="content-box" style="font-size: 11px;">-</div>
+    </div>
+
+    <div class="chunk-count" id="chunkCounter">Trechos enviados: 0</div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
